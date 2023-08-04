@@ -30,7 +30,7 @@ public class Task {
         title = newTask.title();
         description = newTask.description();
         archived = false;
-        useremail = newTask.useremail();
+        useremail = newTask.userEmail();
     }
 
     public void UpdateTask(UpdateTask taskUpdated) {

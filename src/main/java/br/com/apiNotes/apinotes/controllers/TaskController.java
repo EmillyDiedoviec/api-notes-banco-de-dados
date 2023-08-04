@@ -29,7 +29,7 @@ public class TaskController {
     @PostMapping("/{email}")
     @Transactional
     public ResponseEntity addTask(@PathVariable String email, @RequestBody @Valid AddTask newTask){
-        var userEmail = userRepository.findById(newTask.useremail());
+        var userEmail = userRepository.findById(newTask.userEmail());
 
         if(userEmail.isEmpty()) {
             return ResponseEntity.badRequest().body(new ErrorData("Usuário não localizado."));
